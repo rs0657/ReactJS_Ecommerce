@@ -1,0 +1,167 @@
+/* Productlist.css */
+
+.ecommerce {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ecommerce .prod-1,
+.ecommerce .prod-2,
+.ecommerce .prod-3,
+.ecommerce .prod-4,
+.ecommerce .prod-5,
+.ecommerce .prod-6 {
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ecommerce .prod-1:hover,
+.ecommerce .prod-2:hover,
+.ecommerce .prod-3:hover,
+.ecommerce .prod-4:hover,
+.ecommerce .prod-5:hover,
+.ecommerce .prod-6:hover {
+  transform: translateY(-5px);
+}
+
+.ecommerce .prod-1 img,
+.ecommerce .prod-2 img,
+.ecommerce .prod-3 img,
+.ecommerce .prod-4 img,
+.ecommerce .prod-5 img,
+.ecommerce .prod-6 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.ecommerce .prod-1 h2,
+.ecommerce .prod-2 h2,
+.ecommerce .prod-3 h2,
+.ecommerce .prod-4 h2,
+.ecommerce .prod-5 h2,
+.ecommerce .prod-6 h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.ecommerce .prod-1 h3,
+.ecommerce .prod-2 h3,
+.ecommerce .prod-3 h3,
+.ecommerce .prod-4 h3,
+.ecommerce .prod-5 h3,
+.ecommerce .prod-6 h3 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #666;
+}
+
+.ecommerce .prod-1 .add-to-cart-button,
+.ecommerce .prod-2 .add-to-cart-button,
+.ecommerce .prod-3 .add-to-cart-button,
+.ecommerce .prod-4 .add-to-cart-button,
+.ecommerce .prod-5 .add-to-cart-button,
+.ecommerce .prod-6 .add-to-cart-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ecommerce .prod-1 .add-to-cart-button:hover,
+.ecommerce .prod-2 .add-to-cart-button:hover,
+.ecommerce .prod-3 .add-to-cart-button:hover,
+.ecommerce .prod-4 .add-to-cart-button:hover,
+.ecommerce .prod-5 .add-to-cart-button:hover,
+.ecommerce .prod-6 .add-to-cart-button:hover {
+  background-color: #0056b3;
+}
+
+.ecommerce .prod-1 .quantity,
+.ecommerce .prod-2 .quantity,
+.ecommerce .prod-3 .quantity,
+.ecommerce .prod-4 .quantity,
+.ecommerce .prod-5 .quantity,
+.ecommerce .prod-6 .quantity {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ecommerce .prod-1 .quantity button,
+.ecommerce .prod-2 .quantity button,
+.ecommerce .prod-3 .quantity button,
+.ecommerce .prod-4 .quantity button,
+.ecommerce .prod-5 .quantity button,
+.ecommerce .prod-6 .quantity button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ecommerce .prod-1 .quantity button:hover,
+.ecommerce .prod-2 .quantity button:hover,
+.ecommerce .prod-3 .quantity button:hover,
+.ecommerce .prod-4 .quantity button:hover,
+.ecommerce .prod-5 .quantity button:hover,
+.ecommerce .prod-6 .quantity button:hover {
+  background-color: #0056b3;
+}
+
+.ecommerce .prod-1 .quantity span,
+.ecommerce .prod-2 .quantity span,
+.ecommerce .prod-3 .quantity span,
+.ecommerce .prod-4 .quantity span,
+.ecommerce .prod-5 .quantity span,
+.ecommerce .prod-6 .quantity span {
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.popout-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.popout-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.popout-container table th,
+.popout-container table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.popout-container table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.popout-container table tr:hover {
+  background-color: #f2f2f2;
+}

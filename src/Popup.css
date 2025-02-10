@@ -1,0 +1,84 @@
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;align-items: center;justify-content: center;
+}
+
+.popup-in{
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+    padding: 40px 10px;
+}
+.popup button{
+    position: absolute;
+    right: -10px;
+    top: -9px;
+    border-radius: 50%;
+    border: 0;
+    width: 20px;
+    height: 20px;
+    box-shadow: 2px 3px 12px #000;
+    cursor: pointer;
+    background-color: red;
+    color: black;
+}
+/* Popup.css */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-in {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popup-in table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .popup-in th,
+  .popup-in td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .popup-in th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .popup-in tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+  }
+  
