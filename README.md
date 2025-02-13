@@ -49,3 +49,85 @@ To set up the project locally, follow these steps:
    ```bash
    git clone https://github.com/rs0657/ReactJS_Ecommerce.git
    cd ReactJS_Ecommerce
+   ```
+
+2. **Install frontend dependencies**:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+3. **Install backend dependencies**:
+   ```bash
+   cd ../backend
+   npm install
+   ```
+
+4. **Set up environment variables**:
+   - Create a `.env` file in both `frontend` and `backend` directories.
+   - Add the necessary environment variables:
+
+   **Frontend (`frontend/.env`)**:
+   ```
+   REACT_APP_API_URL=your_backend_api_url
+   REACT_APP_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+   ```
+
+   **Backend (`backend/.env`)**:
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   SECRET_KEY=your_secret_key
+   ```
+
+5. **Start the application**:
+   - Start the backend server:
+     ```bash
+     cd backend
+     npm start
+     ```
+   - Start the frontend development server:
+     ```bash
+     cd ../frontend
+     npm start
+     ```
+
+## Usage
+
+After setting up, you can:
+
+- **Browse Products**: View the list of available products.
+- **Add to Cart**: Select products and add them to your shopping cart.
+- **Manage Cart**: Update product quantities or remove items.
+- **Checkout**: Proceed to purchase the items in your cart.
+
+## Contributing
+
+We welcome contributions to enhance this project! To contribute:
+
+1. **Fork the repository**.
+2. **Create a new branch**:
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make your changes**.
+4. **Commit your changes**:
+   ```bash
+   git commit -m 'Add YourFeatureName'
+   ```
+5. **Push to your branch**:
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+6. **Open a pull request**.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact Information
+
+For any queries or support, feel free to contact:
+
+- **Author**: Raghuram Srikanth
+- **Email**: raghuramsrikanth1104@gmail.com
+- **GitHub**: [Your GitHub Profile](https://github.com/rs0657/)
