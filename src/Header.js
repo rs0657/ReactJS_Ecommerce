@@ -12,7 +12,7 @@ const Header = ({ countH, setcount, popStatus, setpopStatus }) => {
         <div>
             <header>
                 <div className="logo">
-                    <img src="./image.png" alt="Your Logo" />
+                    <h1>HARVEST HQ</h1>
                 </div>
                 <nav>
                     <ul>
