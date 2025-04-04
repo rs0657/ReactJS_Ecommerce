@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api";  // Updated port to match new backend port
+const API_URL = `http://${process.env.URL}/api`;  // Updated port to match new backend port
 
 // Fetch all products
 export const fetchProducts = async () => {
