@@ -11,9 +11,13 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'https://your-app.vercel.app', // Replace with your actual Vercel domain
-    /\.vercel\.app$/
+    /\.vercel\.app$/,
+    /\.vercel\.app$/,
+    process.env.FRONTEND_URL || 'http://localhost:3000'
   ],
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use(express.json());
@@ -40,6 +44,23 @@ app.use("/api/products", productRoutes);
 // app.use("/api/cart", cartRoutes);
 
 app.get("/", (req, res) => res.send("API is running..."));
+
+// Debug route to check if API is working
+app.get("/api", (req, res) => {
+  res.json({ 
+    message: "API is working!", 
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
+// Health check route
+app.get("/api/health", (req, res) => {
+  res.json({ 
+    status: "healthy", 
+    timestamp: new Date().toISOString() 
+  });
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {

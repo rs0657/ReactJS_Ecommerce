@@ -9,11 +9,19 @@ const API_BASE_URL = process.env.REACT_APP_API_URL ||
 // Fetch all products
 export const fetchProducts = async () => {
   try {
+    console.log('Fetching products from:', `${API_BASE_URL}/products`);
     const response = await fetch(`${API_BASE_URL}/products`);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
     const data = await response.json();
+    console.log('Products fetched successfully:', data);
     return data;
   } catch (error) {
     console.error('Get products error:', error);
+    console.error('API_BASE_URL:', API_BASE_URL);
     return [];
   }
 };
