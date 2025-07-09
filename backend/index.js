@@ -1,16 +1,21 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-// import mongoose from "mongoose";
-// import authRoutes from "./routes/auth.js";
 import productRoutes from "./routes/ProductsTemp.js";
-// import orderRoutes from "./routes/orders.js";
-// import cartRoutes from "./routes/cart.js";
 
 dotenv.config();
 const app = express();
 
-app.use(cors());
+// Configure CORS for Vercel deployment
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://your-app.vercel.app', // Replace with your actual Vercel domain
+    /\.vercel\.app$/
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Temporarily disable MongoDB connection
