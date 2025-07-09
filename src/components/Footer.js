@@ -71,12 +71,12 @@ const Footer = () => {
                 'Track Your Order'
               ].map((item) => (
                 <li key={item}>
-                  <a
-                    href="#"
-                    className="text-secondary-300 hover:text-accent-400 transition-colors duration-200"
+                  <button
+                    type="button"
+                    className="text-secondary-300 hover:text-accent-400 transition-colors duration-200 bg-transparent border-none cursor-pointer text-left"
                   >
                     {item}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -138,9 +138,9 @@ const Footer = () => {
               © {currentYear} Harvest HQ. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-secondary-400 hover:text-accent-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-secondary-400 hover:text-accent-400 transition-colors">Terms of Service</a>
-              <a href="#" className="text-secondary-400 hover:text-accent-400 transition-colors">Cookie Policy</a>
+              <button type="button" className="text-secondary-400 hover:text-accent-400 transition-colors bg-transparent border-none cursor-pointer">Privacy Policy</button>
+              <button type="button" className="text-secondary-400 hover:text-accent-400 transition-colors bg-transparent border-none cursor-pointer">Terms of Service</button>
+              <button type="button" className="text-secondary-400 hover:text-accent-400 transition-colors bg-transparent border-none cursor-pointer">Cookie Policy</button>
             </div>
           </div>
         </div>
