@@ -10,10 +10,12 @@ const API_BASE_URL = process.env.REACT_APP_API_URL ||
 export const fetchProducts = async () => {
   try {
     console.log('Fetching products from:', `${API_BASE_URL}/products`);
+    console.log('Environment:', process.env.NODE_ENV);
+    
     const response = await fetch(`${API_BASE_URL}/products`);
     
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
     }
     
     const data = await response.json();
@@ -22,6 +24,13 @@ export const fetchProducts = async () => {
   } catch (error) {
     console.error('Get products error:', error);
     console.error('API_BASE_URL:', API_BASE_URL);
+    console.error('Full error details:', {
+      message: error.message,
+      name: error.name,
+      stack: error.stack
+    });
+    
+    // Return empty array as fallback
     return [];
   }
 };

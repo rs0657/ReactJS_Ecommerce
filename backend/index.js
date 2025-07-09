@@ -10,14 +10,14 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://your-app.vercel.app', // Replace with your actual Vercel domain
+    'https://localhost:3000',
     /\.vercel\.app$/,
-    /\.vercel\.app$/,
+    /\.netlify\.app$/,
     process.env.FRONTEND_URL || 'http://localhost:3000'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
 
 app.use(express.json());
