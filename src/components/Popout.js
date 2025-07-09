@@ -1,5 +1,5 @@
 import React from 'react';
-import './Popup.css';
+import '../styles/Popup.css';
 
 function Popout({ arrObjj, popupStatus, popupclose }) {
     if (!popupStatus) return null;
