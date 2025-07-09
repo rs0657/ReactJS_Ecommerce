@@ -8,6 +8,36 @@
 
 Welcome to the ReactJS E-commerce Application! This project provides a seamless online shopping experience, featuring a dynamic product catalog, shopping cart functionality, and more.
 
+## 🔒 **IMPORTANT: Environment Variables Security**
+
+### ⚠️ **NEVER commit these files to GitHub:**
+- `.env`
+- `.env.local`
+- `.env.development`
+- `.env.production`
+- `backend/.env`
+
+### ✅ **What's safe to commit:**
+- `.env.example` - Template files
+- `SECURITY.md` - Security documentation
+- This README
+
+### 🛡️ **Before deploying to production:**
+1. Use different credentials than development
+2. Set environment variables in your hosting platform
+3. Use strong, unique secrets
+4. Never expose sensitive data in frontend code
+
+### 🚀 **Setup Environment Variables:**
+```bash
+# Copy environment templates
+cp .env.example .env
+cp backend/.env.example backend/.env
+
+# Edit the files and add your actual values
+# NEVER commit the .env files!
+```
+
 ## Table of Contents
 
 - [Introduction](#introduction)

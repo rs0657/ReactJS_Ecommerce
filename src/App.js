@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './Header';
-import Productlist from './Prodlist';
+import './styles/App.css';
+import Header from './components/Header';
 import { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -13,7 +11,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         <Header 
           countH={countH} 
           setcount={setCountH}
